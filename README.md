@@ -1,4 +1,5 @@
 # Laravel CRUD dengan JWT Authentication
+# PT Uniktif Media Indonesia
 
 ## Deskripsi Proyek
 
@@ -49,4 +50,17 @@ Proyek ini merupakan aplikasi sederhana berbasis Laravel yang mengimplementasika
    ```bash
    npm run dev
    ```
-## ScreenShoot
+## Screenshots
+### Screen Login
+![image](https://github.com/user-attachments/assets/7f8123dd-391b-4c11-adfd-15bc11fe8240)
+
+### Dashboard
+![image](https://github.com/user-attachments/assets/9d015e83-67e9-499a-9387-a984bb5cf95c)
+
+### User Management
+![image](https://github.com/user-attachments/assets/93f8831d-e27a-47e8-8576-481b1d4e58d0)
+
+### Role Management
+![image](https://github.com/user-attachments/assets/009aca4f-ea2b-455f-9aa1-bc6c789d6a87)
+
+### Hobby Management
