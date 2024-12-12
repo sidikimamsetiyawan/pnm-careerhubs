@@ -58,7 +58,8 @@ Proyek ini merupakan aplikasi sederhana berbasis Laravel yang mengimplementasika
 ![image](https://github.com/user-attachments/assets/9d015e83-67e9-499a-9387-a984bb5cf95c)
 
 ### User Management
-![image](https://github.com/user-attachments/assets/93f8831d-e27a-47e8-8576-481b1d4e58d0)
+![image](https://github.com/user-attachments/assets/1514a792-ef2f-450e-87aa-e6d1cb0ed1f6)
+![image](https://github.com/user-attachments/assets/881e91b7-38d1-4ca2-85ab-ec789637eeec)
 
 ### Role Management
 ![image](https://github.com/user-attachments/assets/009aca4f-ea2b-455f-9aa1-bc6c789d6a87)
