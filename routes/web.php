@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboarController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\HobbyController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [AuthController::class, 'login']);
@@ -24,9 +25,16 @@ Route::group(['middleware' => 'useradmin'], function () {
     Route::get('panel/user', [UserController::class, 'list']); 
     Route::get('panel/user/add', [UserController::class, 'add']);
     Route::post('panel/user/add', [UserController::class, 'insert']);
-    // Route::get('panel/user/edit/{id}', [UserController::class, 'edit']);
-    // Route::post('panel/user/edit/{id}', [UserController::class, 'update']);
-    // Route::get('panel/user/delete/{id}', [UserController::class, 'delete']);   
+    Route::get('panel/user/edit/{id}', [UserController::class, 'edit']);
+    Route::post('panel/user/edit/{id}', [UserController::class, 'update']);
+    Route::get('panel/user/delete/{id}', [UserController::class, 'delete']);
+    
+    Route::get('panel/hobby', [HobbyController::class, 'list']);
+    Route::get('panel/hobby/add', [HobbyController::class, 'add']);
+    Route::post('panel/hobby/add', [HobbyController::class, 'insert']);
+    // Route::get('panel/hobby/edit/{id}', [HobbyController::class, 'edit']);
+    // Route::post('panel/hobby/edit/{id}', [HobbyController::class, 'update']);
+    // Route::get('panel/hobby/delete/{id}', [HobbyController::class, 'delete']);
 });
 
 
