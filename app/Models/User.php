@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\HobbyModel;
 
 class User extends Authenticatable
 {
@@ -57,4 +58,11 @@ class User extends Authenticatable
     {
         return self::find($id);
     }
+
+    public function hobbies()
+    {
+        return $this->belongsToMany(HobbyModel::class, 'user_hobbies', 'user_id', 'hobby_id');
+    }
+
+
 }

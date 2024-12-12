@@ -32,9 +32,9 @@ Route::group(['middleware' => 'useradmin'], function () {
     Route::get('panel/hobby', [HobbyController::class, 'list']);
     Route::get('panel/hobby/add', [HobbyController::class, 'add']);
     Route::post('panel/hobby/add', [HobbyController::class, 'insert']);
-    // Route::get('panel/hobby/edit/{id}', [HobbyController::class, 'edit']);
-    // Route::post('panel/hobby/edit/{id}', [HobbyController::class, 'update']);
-    // Route::get('panel/hobby/delete/{id}', [HobbyController::class, 'delete']);
+    Route::get('panel/hobby/edit/{id}', [HobbyController::class, 'edit']);
+    Route::post('panel/hobby/edit/{id}', [HobbyController::class, 'update']);
+    Route::get('panel/hobby/delete/{id}', [HobbyController::class, 'delete']);
 });
 
 

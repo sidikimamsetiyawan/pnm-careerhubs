@@ -51,6 +51,17 @@
                       </select>
                     </div>
                   </div>
+
+                  <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label">Hobby</label>
+                    <div class="col-sm-10">
+                      <select class="form-select" multiple name="hobby_id">
+                        @foreach ($getHobby as $key)
+                          <option value="{{ $key->id }}">{{ $key->hobby_name }}</option>
+                        @endforeach
+                      </select>
+                    </div>
+                  </div>
   
                   <div class="row mb-3">
                     <div class="col-sm-12" style="text-align: right;">

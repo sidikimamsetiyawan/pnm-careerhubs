@@ -27,4 +27,29 @@ class HobbyController extends Controller
 
         return redirect('panel/hobby')->with('suceess', "Hobby has been successfully created.");
     }
+
+    public function edit($id)
+    {  
+        $data['getRecord'] = HobbyModel::getSingle($id);
+        return view('hobby.edit',$data);
+    }
+
+    public function update($id, Request $request)
+    {
+        // dd($request->all());
+        $save = HobbyModel::getSingle($id);
+        $save->hobby_name = $request->hobby_name;
+        $save->save();
+
+        return redirect('panel/hobby')->with('suceess', "Hobby has been successfully updated.");
+    }
+
+    public function delete($id)
+    {
+         // dd($request->all());
+         $save = HobbyModel::getSingle($id);
+         $save->delete();
+ 
+         return redirect('panel/hobby')->with('suceess', "Hobby has been successfully deleted.");
+    }
 }

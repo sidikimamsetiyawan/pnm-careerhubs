@@ -33,6 +33,7 @@
                       <th scope="col">Name</th>
                       <th scope="col">Email</th>
                       <th scope="col">Role</th>
+                      <th scope="col">Hobby</th>
                       <th scope="col">Date</th>
                       <th scope="col">Action</th>
                     </tr>
@@ -43,6 +44,19 @@
                         <td>{{ $value->name }}</td>
                         <td>{{ $value->email }}</td>
                         <td>{{ $value->role_name }}</td>
+
+                        <td>
+                          @if($value->hobbies->isNotEmpty())
+                              <ul>
+                                  @foreach ($value->hobbies as $hobby)
+                                      <li>{{ $hobby->hobby_name }}</li>
+                                  @endforeach
+                              </ul>
+                          @else
+                              <em>No hobbies assigned</em>
+                          @endif
+                      </td>
+
                         <td>{{ $value->created_at }}</td>
                         <td>
                             <a href="{{ url('panel/user/edit/'.$value->id) }}" class="btn btn-primary btn-sm">Edit</a>

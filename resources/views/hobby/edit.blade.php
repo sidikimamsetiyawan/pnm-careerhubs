@@ -5,7 +5,7 @@
   
 
     <div class="pagetitle">
-      <h1>Edit Role</h1>
+      <h1>Edit Hobby</h1>
     </div>
 
     <section class="section">
@@ -14,15 +14,15 @@
   
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Form Role</h5>
+                <h5 class="card-title">Form Hobby</h5>
   
                 <!-- General Form Elements -->
                 <form action="" method="POST">
                     {{ csrf_field() }}
                   <div class="row mb-3">
-                    <label for="inputText" class="col-sm-2 col-form-label">Role</label>
+                    <label for="inputText" class="col-sm-2 col-form-label">Hobby</label>
                     <div class="col-sm-10">
-                      <input type="text" name="name" value="{{ $getRecord->name }}" class="form-control" required>
+                      <input type="text" name="hobby_name" value="{{ $getRecord->hobby_name }}" class="form-control" required>
                     </div>
                   </div>
   
