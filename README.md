@@ -64,3 +64,5 @@ Proyek ini merupakan aplikasi sederhana berbasis Laravel yang mengimplementasika
 ![image](https://github.com/user-attachments/assets/009aca4f-ea2b-455f-9aa1-bc6c789d6a87)
 
 ### Hobby Management
+![image](https://github.com/user-attachments/assets/80b1359b-6d33-47dc-a986-35950724bda1)
+
