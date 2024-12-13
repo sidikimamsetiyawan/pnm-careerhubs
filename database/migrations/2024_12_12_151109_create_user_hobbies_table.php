@@ -11,12 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('user_hobbies', function (Blueprint $table) {
-            // $table->id(); // Optional primary key
-            $table->foreignId('user_id')->constrained()->onDelete('cascade'); // Relasi ke tabel users
-            $table->foreignId('hobby_id')->constrained()->onDelete('cascade'); // Relasi ke tabel hobbies
-            $table->timestamps(); // Kolom created_at dan updated_at
-        });
+        if (!Schema::hasTable('user_hobbies')) {
+            Schema::create('user_hobbies', function (Blueprint $table) {
+                // $table->id(); // Optional primary key
+                $table->foreignId('user_id')->constrained()->onDelete('cascade'); // Relasi ke tabel users
+                $table->foreignId('hobby_id')->constrained()->onDelete('cascade'); // Relasi ke tabel hobbies
+                $table->timestamps(); // Kolom created_at dan updated_at
+            });
+        }
     }
 
     /**
