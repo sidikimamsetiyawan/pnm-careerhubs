@@ -37,7 +37,7 @@
                   </thead>
                   <tbody>
                     @foreach ($getRecord as $value)
-                        <th scope="row">{{ $value->id }}</th>
+                        <th scope="row">{{ $loop->iteration }}</th>
                         <td>{{ $value->name }}</td>
                         <td>{{ $value->created_at }}</td>
                         <td>

@@ -48,7 +48,8 @@ class UserController extends Controller
 
     public function edit($id)
     {  
-        $data['getRecord'] = User::getSingle($id);
+        // $data['getRecord'] = User::getSingle($id);
+        $data['getRecord'] = User::with('hobbies')->findOrFail($id); 
         $data['getRole'] = RoleModel::getRecord();
         $data['getHobby'] = HobbyModel::getRecord();
         return view('panel.user.edit',$data);
@@ -66,16 +67,20 @@ class UserController extends Controller
         $user->role_id = trim($request->role_id);
         $user->save();
 
-        return redirect('panel/user')->with('suceess', "User has been successfully created.");
+         // Sync hobbies in the pivot table
+        $user->hobbies()->sync($request->input('hobby_id', [])); // Sync hobbies or detach all if empty
+
+        return redirect('panel/user')->with('suceess', "User updated successfully.");
     }
 
     public function delete($id)
     {
          // dd($request->all());
          $save = User::getSingle($id);
+         $save->hobbies()->detach();
          $save->delete();
  
-         return redirect('panel/user')->with('suceess', "User has been successfully deleted.");
+         return redirect('panel/user')->with('suceess', "User and related hobbies deleted successfully.");
     }
 
 }

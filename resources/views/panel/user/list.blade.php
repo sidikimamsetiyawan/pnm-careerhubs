@@ -40,7 +40,7 @@
                   </thead>
                   <tbody>
                     @foreach ($getRecord as $value)
-                        <th scope="row">{{ $value->id }}</th>
+                        <th scope="row">{{ $loop->iteration }}</th>
                         <td>{{ $value->name }}</td>
                         <td>{{ $value->email }}</td>
                         <td>{{ $value->role_name }}</td>
