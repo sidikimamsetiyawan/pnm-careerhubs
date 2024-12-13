@@ -50,6 +50,14 @@ Proyek ini merupakan aplikasi sederhana berbasis Laravel yang mengimplementasika
    ```bash
    npm run dev
    ```
+## Testing With Postman
+You can access the Postman collection for testing the API endpoints here: [Postman Collection](https://orange-trinity-586014.postman.co/workspace/Laravel-11~da50da20-5de2-4989-8fd3-86387fc66dc0/collection/9072736-d9b051a5-e438-4e24-82c6-4e02b4c5adc6?action=share&creator=9072736).
+
+## API Documentation
+The complete API documentation for this project is available online. You can access it at the link below:
+
+[View API Documentation on Postman](https://documenter.getpostman.com/view/9072736/2sAYHxoQAE)
+
 ## Screenshots
 ### Screen Login
 ![image](https://github.com/user-attachments/assets/7f8123dd-391b-4c11-adfd-15bc11fe8240)
