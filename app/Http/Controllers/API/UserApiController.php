@@ -53,10 +53,13 @@ class UserApiController extends Controller
              // Attach hobbies to the user in the pivot table
             $user->hobbies()->attach($request->input('hobby_id'));
 
+            $tokenResult = $user->createToken('API Token')->plainTextToken;
+
             return response()->json([
                 'status' => true,
                 'message' => 'Created user has been successfully.',
-                'result' => $user
+                'result' => $user,
+                'access_token' => $tokenResult
             ], 200);
         } catch (\Exception $e) {
             // Handle any errors
