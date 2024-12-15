@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\API\AuthApiController;
+use App\Http\Controllers\API\HobbyApiController;
+use App\Http\Controllers\API\RoleApiController;
 use App\Http\Controllers\API\UserApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -11,6 +13,8 @@ Route::get('/user', function (Request $request) {
 
 route::middleware('auth:sanctum')->group(function(){
     Route::apiResource('users', UserApiController::class); // user.index, user.store
+    Route::apiResource('roles', RoleApiController::class); // user.index, user.store
+    Route::apiResource('hobbies', HobbyApiController::class); // user.index, user.store
 
     Route::post('/logout', [AuthApiController::class, 'logout']);
 });

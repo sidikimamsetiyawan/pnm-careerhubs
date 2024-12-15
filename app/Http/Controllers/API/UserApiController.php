@@ -84,13 +84,13 @@ class UserApiController extends Controller
     
             return response()->json([
                 'status' => true,
-                'message' => 'Updated user has been successfully.',
+                'message' => 'Get Data retrieved user successfully.',
                 'result' => $users
             ], 200);
         } catch (\Exception $e) {
             return response()->json([
                 'status' => false,
-                'message' => 'Failed to updated user.',
+                'message' => 'Failed to retrieve data user.',
                 'error' => $e->getMessage()
             ], 500);
         }
